@@ -1,18 +1,16 @@
 ##############################################
 ### IDEAS FOR POSTS GO HERE        ###########
-### (use blog_idea to add new ones ###########
 ##############################################
 
-about programming as a mainstream thing - laundry files + silicon valley
-write about how including a gem can be messy bussiness (about the rails_api destroyed sessions)
-adventures with z-wave - write about the problems with openhab and usb ports
-write about how to triage bad solr indexing models
-write about the problems with phillips e3, how to send an ultrasonic signal so
-that they stay alive, also with problems with cron to get the proper output
-device
-how when you override a rails controller, it quietly fails https://bitbucket.org/agricircleit/agricircle/commits/b2b2b0a9b9176d5f15c4d22077867302f4d077db
+## General ideas:
+ * good podcasts I've heard
+ * cool phone apps - good habits
+
 
 about doing repositories in rails: 
   http://rmosolgo.github.io/blog/2015/03/12/move-activerecord-scopes-into-separate-files/
   http://stackoverflow.com/questions/25444838/move-scopes-from-model-to-some-module-in-rails-4
   http://stackoverflow.com/questions/3357712/static-methods-in-ruby-modules
+
+######## CURRENT DRAFTS:   ###################
+
