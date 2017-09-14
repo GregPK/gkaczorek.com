@@ -4,6 +4,9 @@ description: Almost personal development blog by Greg Kaczorek
 author: Greg Kaczorek
 date_format: "%b %-d, %Y"
 
+future: true
+plugins: [jekyll-paginate]
+
 # Google services
 google_analytics:
 google_verification:

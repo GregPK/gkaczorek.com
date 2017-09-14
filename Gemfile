@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 group :development do
-  gem "jekyll", "~> 2.5.3"
-  gem 'redcarpet', '~> 3.2'
+  gem "jekyll", "~> 3.5"
+  gem 'redcarpet'
   gem 'albino'
+  gem 'jekyll-paginate'
 end
