@@ -2,15 +2,16 @@
 ### IDEAS FOR POSTS GO HERE        ###########
 ##############################################
 
+* Is open source crap?
+* Gaming in Linux
+* On how knowledge = perception
+
 ## General ideas:
  * good podcasts I've heard
  * cool phone apps - good habits
+ * recent conversations
+ * technical topics
 
-
-about doing repositories in rails: 
-  http://rmosolgo.github.io/blog/2015/03/12/move-activerecord-scopes-into-separate-files/
-  http://stackoverflow.com/questions/25444838/move-scopes-from-model-to-some-module-in-rails-4
-  http://stackoverflow.com/questions/3357712/static-methods-in-ruby-modules
 
 ######## CURRENT DRAFTS:   ###################
 
