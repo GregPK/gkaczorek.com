@@ -2,8 +2,9 @@
 layout: post
 title: "How to triage bad SOLR indexing models"
 date: 2015-06-03 23:16
-comments: true
 ---
+
+Simple script to see which SOLR indexes build the longest.
 
 ## Problem
 
@@ -15,7 +16,7 @@ comments: true
 
 Here is the rake task i use:
 
-```ruby
+~~~ruby
 
 require 'benchmark'
 
@@ -46,7 +47,7 @@ task solr_reindex_benchmark: :environment do
 
 end
 
-```
+~~~
 
 To use this task:
 
@@ -55,4 +56,3 @@ To use this task:
 3. Repeat steps 1 & 2 until you reach the one that is the problem.
 
 Pretty fast way of figuring that out.
-

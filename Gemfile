@@ -5,4 +5,5 @@ group :development do
   gem 'redcarpet'
   gem 'albino'
   gem 'jekyll-paginate'
+  gem 'jekyll-theme-hydeout', "~> 3.4" 
 end

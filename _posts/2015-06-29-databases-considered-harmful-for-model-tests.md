@@ -2,9 +2,7 @@
 layout: post
 title: "Stressed about model tests hitting the database in Rails 4.2? Here's the solution"
 date: 2015-06-18 21:22
-comments: true
-published: true
-categories: rails, ruby
+tags: rails, ruby
 ---
 **Disclaimer**: this is more of a rant and a story about a lack of solution  than it is a actual how-to. If you're looking for answers, you will only have more questions at the end of this.
 
@@ -17,7 +15,7 @@ I wanted to do it properly this time, so I started with a way to properly commun
 
 As I went throught the [instructions](https://github.com/simplabs/ember-simple-auth/tree/master/packages/ember-simple-auth-devise) I wound up with something like this in the standard `Devise` user:
 
-```ruby
+~~~ruby
 
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
@@ -30,15 +28,15 @@ class User < ActiveRecord::Base
     end
   end
 
- # ... and so on	
+ # ... and so on
 end
-```
+~~~
 
-That's pretty standard. Implemented and moved on. 
+That's pretty standard. Implemented and moved on.
 
 As I began to write my very first test to check this functionality I wound up with the following piece of code:
 
-```ruby
+~~~ruby
 class UserTest < ActiveSupport::TestCase
   let(:user_new)   { User.create!(email: 'user1@example.com') }
 
@@ -48,13 +46,13 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 end
-```
+~~~
 
 Some uneasy feeling crept up my spine. As I stared into the `1 runs, 2 assertions, 0 failures, 0 errors, 0 skips` result, I tried to place that feeling.
 
 Then I remembered when I first saw the standard Rails model setup, several years back. Coming from the much frowned upon world of PHP, I was flabbergasted to see that Rails models aren't what I was used to: they were models, storage handlers, entity repositories and authentication handlers all in one package.
 
-Later on I've realised the fast development pace and verbostiy these conventions can provide *if* used appropriately. 
+Later on I've realised the fast development pace and verbostiy these conventions can provide *if* used appropriately.
 
 Then came real life. Every project I've worked on since (apart from some personal ones) were big projects. Most of them have been developed for more than 1 year before I stepped in. Every single one of them had a suite of tests that took far too long to run.
 
@@ -85,7 +83,7 @@ Here's the thing: I have come to believe the following things:
 
 If would use something like Sequel or Ruby Object Mapper, or even the Grape api gem with Entities and whatnot, I might avoid the problem I'm describing here, but I would encounter a 100 others. I've done it before on smaller projects - I know what I'm talking about.
 
-This project is mostly about me learning Ember, making an API that people might want to contribute to and making something useful for myself. By using something that is not the standard solution, I would violate every one of the above rules. 
+This project is mostly about me learning Ember, making an API that people might want to contribute to and making something useful for myself. By using something that is not the standard solution, I would violate every one of the above rules.
 
 ## Discarded solutions
 
@@ -103,18 +101,18 @@ The rundown is:
 2. Read the [assurance by DHH](http://david.heinemeierhansson.com/2014/slow-database-test-fallacy.html) that everything is fine.
 3. Repeat "Everything is fine" 10 times.
 4. Write a flippant blog article.
-5. Go back to coding, ie. doing actual work. 
+5. Go back to coding, ie. doing actual work.
 
 Bonus advice: These are the pro-tips for programming that should help you keep safe:
 
 * Not all tests require the database.
 * New objects are created by `#new` not `#create`. Really. I've looked it up in the docs and everything.
-* Objects have this cool feature that if you write 
-```ruby 
+* Objects have this cool feature that if you write
+~~~ruby
 def initialize
   #code
 end
-```
+~~~
 the code part will be run after you create a new object.
 
 Now let's ship something.

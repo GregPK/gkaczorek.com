@@ -1,0 +1,6 @@
+{% if page.comments != false and site.disqus.shortname.count > 0 %}
+  <section class="comments">
+    <h2>Comments</h2>
+    {% include disqus.html %}
+  </section>
+{% endif %}

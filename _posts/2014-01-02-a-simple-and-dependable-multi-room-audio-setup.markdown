@@ -2,17 +2,17 @@
 layout: post
 title: "A simple and dependable multi-room audio setup"
 date: 2014-01-02 12:13
-comments: true
 ---
 
+A cheap way to have multi-room audio using OS software and RaspberryPi's.
 
 ## The need
 
-I wanted to have a simple way to stream audio in all the rooms of my 
+I wanted to have a simple way to stream audio in all the rooms of my
 apartment at once. Surely not a complicated matter, eh?
 
-Research ensued, which led me through a succession of forums and blogs giving 
-advice on bluetooth speakers, closed pricy systems and the ever so useful 
+Research ensued, which led me through a succession of forums and blogs giving
+advice on bluetooth speakers, closed pricy systems and the ever so useful
 recomendations like "use headphones".
 
 To reiterate, my needs were:
@@ -41,7 +41,7 @@ I had the following situation:
 
 ## Conclusions
 
-* squeezelite is surprisingly stable and easy to install on all the machines 
+* squeezelite is surprisingly stable and easy to install on all the machines
   (HTPC + workstation + Rasbpy, all running different flavours of Linux)
 * LMS is also very stable and handles my music library very well (tags and the like)
 * You can have a multi-room setup for the price of (Raspberry+Speakers) &times; (room count)

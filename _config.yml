@@ -4,7 +4,7 @@ description: Almost personal development blog by Greg Kaczorek
 author: Greg Kaczorek
 date_format: "%b %-d, %Y"
 
-future: true
+theme: 'jekyll-theme-hydeout'
 plugins: [jekyll-paginate]
 
 # Google services
@@ -20,40 +20,31 @@ ajaxify_contact_form: true
 
 # Disqus post comments
 # (leave blank to disable Disqus)
-disqus_shortname:
+disqus:
+  shortname: ''
 
 # Social icons
-github_username: GregPK
-bitbucket_username: GregPK
-stackoverflow_id:
-twitter_username: gregpk
-google_plus_id:
-linkedin_username:
-angellist_username:
-medium_id:
-bitcoin_url:
-paypal_url:
-flattr_button:
+github:
+  repo:             https://github.com/GregPK
 
 # Post sharing icons
-show_sharing_icons: true
-share_text: 'Share this post!'
+# show_sharing_icons: true
+# share_text: 'Share this post!'
 # Change to 'true' to enable individual icons
-share_facebook: true
-share_twitter: true
-share_googleplus: true
-share_linkedin: false
-share_digg: false
-share_tumblr: false
-share_reddit: false
-share_stumbleupon: false
-share_hackernews: true
-
+# share_facebook: true
+# share_twitter: true
+# share_googleplus: true
+# share_linkedin: false
+# share_digg: false
+# share_tumblr: false
+# share_reddit: false
+# share_stumbleupon: false
+# share_hackernews: true
 
 # Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data", 'smart', 'tables',]
+markdown: kramdown
+highlighter: rouge
+
 permalink:    pretty
 paginate:     10
 sass:

@@ -48,12 +48,12 @@ design as a teenager, event in something akin to this, and I can safely say that
 simple things compared to the rest of the game. Consider the following code sample from the point
 of view of the beastie:
 
-```ruby
+~~~ruby
 
 me.attack() if me.spellcaster? and player.spellcaster? and me.magicka > player.magicka and player.health*3 < me.health
 me.flee() if me.brute? and player.spellcaster? and !me.can_find_path_to(player)
 
-```
+~~~
 
 Of course this is an oversimplification, but the mere fact that this is a rather simple concept
 bothers me and takes some fun out of gaming. Hopefully this will be handled by a patch in the future.
